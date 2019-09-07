@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Electron Hello World!</title>
+    <link rel="stylesheet" href="editor.css">
   </head>
   <body>
-    <h1>Electron Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div id="menu"><div class="iconMenu" id="b"></div><div class="iconMenu"></div><div class="iconMenu"></div></div>
+    <div id="playground" contenteditable="true">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="editor.js"></script>
   </body>
 </html>

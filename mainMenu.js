@@ -2,6 +2,8 @@ const {Menu} = require('electron')
 const electron = require('electron')
 const app = electron.app
 
+const BrowserWindow = require('electron').BrowserWindow;
+
 const template = [
   {
     label: 'Fichier',
@@ -15,7 +17,8 @@ const template = [
       {
         role: 'save',
         label: 'Enregistrer',
-        accelerator: 'ctrl+S'
+        accelerator: 'ctrl+S',
+        click() { sauvegarder() }
       },
       {
         role: 'savas',
@@ -82,4 +85,9 @@ function ouvrir(){
   const { dialog } = require('electron')
   var cheminFichier = dialog.showOpenDialogSync({ properties: ['openFile', 'multiSelections'] })
   console.log(cheminFichier[0]);
+}
+
+function sauvegarder(){
+  var focusedWindow = BrowserWindow.getFocusedWindow();
+  focusedWindow.webContents.send('file-save');
 }

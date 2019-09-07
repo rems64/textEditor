@@ -10,9 +10,11 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, webPreferences: {nodeIntegration: true}})
+  mainWindow = new BrowserWindow({width: 1800, height: 720, webPreferences: {nodeIntegration: true}})
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/editor.html`)
+
+  mainWindow.webContents.openDevTools();
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
      // Dereference the window object, usually you would store windows

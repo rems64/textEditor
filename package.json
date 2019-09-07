@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rems64/textEditor/issues"
   },
-  "homepage": "https://github.com/rems64/textEditor#readme"
+  "homepage": "https://github.com/rems64/textEditor#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }

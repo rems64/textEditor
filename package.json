@@ -1,0 +1,20 @@
+{
+  "name": "texteditor",
+  "version": "1.0.0",
+  "description": "simple text editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rems64/textEditor.git"
+  },
+  "author": "Remy FAYET",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rems64/textEditor/issues"
+  },
+  "homepage": "https://github.com/rems64/textEditor#readme"
+}

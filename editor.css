@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  background-color:  #f7f7f7;
 }
 
 body{
@@ -8,7 +9,25 @@ body{
   height: 100%;
 }
 
+#menu
+{
+  height: 5%;
+}
 
+.iconMenu
+{
+  font-size: 200%;
+  padding: 6px;
+  margin: 2px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.iconMenu:hover
+{
+  border: 1px solid grey;
+  background-color: #ffff;
+}
 #playground
 {
   width: 100%;

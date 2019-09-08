@@ -10,21 +10,6 @@ function getSelectedText() {
 
   return t;
 }
-ipcRenderer.on('save', function() {
-  save();
-});
-
-ipcRenderer.on('bold', function() {
-  bold();
-});
-
-ipcRenderer.on('italic', function() {
-  italic();
-});
-
-ipcRenderer.on('underline', function() {
-  italic();
-});
 
 
 function save() {
@@ -61,11 +46,7 @@ function italic() {
 function bold() {
     console.log('bold');
     var selection = getSelectedText();
-    console.log(selection);
     var selection_text = selection.toString();
-    console.log(selection_text);
-
-    // How do I add a span around the selected text?
 
     var span = document.createElement('b');
     span.textContent = selection_text;
@@ -74,3 +55,58 @@ function bold() {
     range.deleteContents();
     range.insertNode(span);
 };
+
+function underline() {
+    console.log('underline');
+    var selection = getSelectedText();
+    var selection_text = selection.toString();
+
+    var span = document.createElement('underline');
+    span.textContent = selection_text;
+
+    var range = selection.getRangeAt(0);
+    range.deleteContents();
+    range.insertNode(span);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ipcRenderer.on('save', function() {
+  save();
+});
+
+ipcRenderer.on('bold', function() {
+  bold();
+});
+
+ipcRenderer.on('italic', function() {
+  italic();
+});
+
+ipcRenderer.on('underline', function() {
+  italic();
+});
+
+$("#bold").on('click', function() {
+  bold();
+})
+
+$("#italic").on('click', function() {
+  italic();
+})
+
+$("#underline").on('click', function() {
+  underline();
+})

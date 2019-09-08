@@ -11,14 +11,52 @@ body{
 
 #menu
 {
-  height: 5%;
+  margin: 0;
+  top: 0;
+  height: 50px;
+  display: flex;
+}
+
+#playground
+{
+  width: 99%;
+  height: 90%;
+  color: black;
+  margin: 0.5%;
+  margin-top: 10px;
+}
+
+.newFile
+{
+  background: url("imgs/file-solid.svg") no-repeat top left;
+}
+.saveFile
+{
+  background: url("imgs/save-solid.svg") no-repeat top left;
+}
+.bold
+{
+  background: url("imgs/bold-solid.svg") no-repeat top left;
+}
+.italic
+{
+  background: url("imgs/italic-solid.svg") no-repeat top left;
+}
+.underline
+{
+  background: url("imgs/underline-solid.svg") no-repeat top left;
 }
 
 .iconMenu
 {
-  font-size: 200%;
-  padding: 6px;
-  margin: 2px;
+  user-select: none;
+  display: block;
+  text-indent: -9999px;
+  width: 61px;
+  height: 45px;
+  background-size: 61px 45px;
+  padding: 2px;
+  margin: 5px;
   border: 1px solid transparent;
   border-radius: 5px;
 }
@@ -28,9 +66,20 @@ body{
   border: 1px solid grey;
   background-color: #ffff;
 }
-#playground
+
+.iconMenu:active
 {
-  width: 100%;
-  height: 100%;
-  color: black;
+  background-color: #CCCCCC;
+}
+
+b{
+  font-weight: bold;
+}
+
+i{
+  font-style: italic;
+}
+
+underline{
+  text-decoration: underline;
 }
